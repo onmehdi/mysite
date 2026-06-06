@@ -1,12 +1,23 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 </head>
+
 <body>
     <h1>this is a home page</h1>
-    <p> every thing in my project is the  best part of audions and we weant this page create in website folder </p>
+    <p> every thing in my project is the best part of audions and we weant this page create in website folder </p>
+
+    <div class="container mt-5">
+        <button class="btn btn-primary">اگر این دکمه آبی است، بوت‌استرپ فعال است!</button>
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
+
 </html>

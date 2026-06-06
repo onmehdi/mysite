@@ -5,12 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/statics/bootstrap/css/bootstrap.min.css">
+
 </head>
 
 <body>
     <h1>about</h1>
     <p> this is about </p>
     <p> this is second paragraph</p>
+
+
+    <div class="container mt-5">
+        <button class="btn btn-primary">اگر این دکمه آبی است، بوت‌استرپ فعال است!</button>
+    </div>
+
+    <p>مقدار مدیا یوآرال این است: {{ MEDIA_URL }}</p>
+
+    <img src= "{{ MEDIA_URL }}mustache9.jpg" >
+
+    <script src="/statics/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
