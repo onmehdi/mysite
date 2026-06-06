@@ -1,16 +1,15 @@
 # from website.views import pagetest,json_test
-from website.views import *
+from blog.views import *
 from django.urls import path
 
 
-app_name = 'website'
+app_name = 'blog'
 
 urlpatterns = [
     # path('urladdress','view','name')
     # path('pagetest', pagetest),
     # path('json-test', json_test),
 
-    path('', index_view,name='index'),
-    path('about', about_view,name='about'),
-    path('contact', contact_view,name='contact'),
+    path('', blog_view, name='index'),
+    path('single', blog_single, name='single'),
 ]
