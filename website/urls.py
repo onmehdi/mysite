@@ -3,6 +3,7 @@ from website.views import *
 from django.urls import path
 
 
+
 app_name = 'website'
 
 urlpatterns = [
