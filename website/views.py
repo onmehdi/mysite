@@ -20,3 +20,6 @@ def contact_view(request):
 
 def test_view(request):
     return render(request,'website/test.html',{'firstname':'ali','lastname':'rezaei'})
+
+def index1_view(request):
+    return render(request,'website/index1.html')

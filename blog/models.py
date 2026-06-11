@@ -14,3 +14,11 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
 
+    # def __str__(self):
+    #     return "{} - {}".format(self.id,self.title)
+
+# 2026-06-09 12:01:03.937334
+
+# 2026-06-09 12:29:54.992774
+# 2026-06-09 12:06:40.634158
+
