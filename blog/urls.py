@@ -11,6 +11,8 @@ urlpatterns = [
     # path('json-test', json_test),
 
     path('', blog_view, name='index'),
+    path('category/<str:catname>', blog_view, name='postcat'),
+    path('auther/<str:auther_name>', blog_view, name='postcat'),
     path('<int:pid>', blog_single, name='single'),
     path('test',test_view, name='test'),
     # path('post-<int:pid>',test_view, name='test'),

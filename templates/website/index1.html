@@ -1,15 +1,27 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
+{% block content %}
+<!-- start banner Area -->
+<section class="banner-area relative">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row fullscreen align-items-center justify-content-between">
+			<div class="col-lg-6 col-md-6 banner-left">
+				<h6 class="text-white">Away from monotonous life</h6>
+				<h1 class="text-white">Magical Travel</h1>
+				<p class="text-white">
+					If you are looking at blank cassettes on the web, you may be very confused at the
+					difference in price. You may see some for as low as $.17 each.
+				</p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-</head>
+			</div>
 
-<body>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+
     <h1>arina ahmadi</h1>
     <p> every thing in my project is the best part of audions and we weant this page create in website folder </p>
 
@@ -18,6 +30,6 @@
     </div>
 
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-</body>
 
-</html>
+
+{% endblock %}

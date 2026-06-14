@@ -8,3 +8,10 @@ class Contact(models.Model):
     message = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
+
+
+class Person(models.Model):
+    fname = models.CharField(max_length=100)
+    lname = models.CharField(max_length=250)
+    melicode = models.CharField(max_length=10)
+    

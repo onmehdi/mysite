@@ -2,10 +2,20 @@ from django.shortcuts import render,get_object_or_404
 from blog.models import Post
 
 # Create your views here.
-def blog_view(request):
+def blog_view(request,catname=None,auther_username=None):
     posts = Post.objects.filter(status = 1)
+    if catname:
+        posts = Post.objects.filter(category__name = catname)
+    if auther_username:
+        posts = Post.objects.filter(Auther__username = auther_username)
     context = {'posts':posts}
     return render(request,'blog/blog-home.html',context)
+
+def blog_view_cat(request,catname):
+    posts = Post.objects.filter(status = 1,category__name = catname)
+    context = {'posts':posts}
+    return render(request,'blog/blog-home.html',context)
+
 
 def blog_single(request,pid):
     post = get_object_or_404(Post,pk=pid,status=1)

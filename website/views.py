@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
+from website.models import Person
 
 def pagetest(request):
     return HttpResponse("<h1> this is a test </h1>")
@@ -23,3 +24,8 @@ def test_view(request):
 
 def index1_view(request):
     return render(request,'website/index1.html')
+
+def test1_view(request):
+    people = Person.objects.all()
+    context = {'people' : people}
+    return render(request,'website/test1.html',context)
