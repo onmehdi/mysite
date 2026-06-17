@@ -24,7 +24,6 @@ def popularposts():
     posts = Post.objects.filter(status = 1).order_by('-published_date')[:2]
     return {'posts':posts}
 
-
 @register.inclusion_tag('blog/latest-post.html')
 def latest_post(args = 4):
     Posts = Post.objects.filter(status = 1).order_by('published_date')[:args]

@@ -7,7 +7,7 @@ def blog_view(request,catname=None,auther_username=None):
     if catname:
         posts = Post.objects.filter(category__name = catname)
     if auther_username:
-        posts = Post.objects.filter(Auther__username = auther_username)
+        posts = Post.objects.filter(auther__username = auther_username)
     context = {'posts':posts}
     return render(request,'blog/blog-home.html',context)
 
