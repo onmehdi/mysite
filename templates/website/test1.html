@@ -10,13 +10,15 @@
 <body>
     
     <ul>
-        {% for p in people %}
-            <li>first name : {{p.fname}}   </li> 
-            <li>last name : {{p.lname}} </li>   
-            <li>code meli : {{p.melicode}} </li>  
-            <li> ----------------------------- </li>
-        {% endfor %}
+            <li> test  </li> 
+            <li></li>   
     </ul>
+
+    <form action = "{% url 'website:test1' %}" method = "post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
     
 
 </body>
