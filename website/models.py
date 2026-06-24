@@ -14,4 +14,7 @@ class Person(models.Model):
     fname = models.CharField(max_length=100)
     lname = models.CharField(max_length=250)
     melicode = models.CharField(max_length=10)
+
+class Newsletter(models.Model):
+    email = models.EmailField()
     

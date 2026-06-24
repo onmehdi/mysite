@@ -28,7 +28,8 @@ urlpatterns = [
     path('',include('website.urls')),
     # چنانچه یک مسیر زمان تایپ آدرس درون آن اسمی از blog آوردیم منظور مسیر فیزیکی برو توی app blog و پوشه url 
     # برعکس آن روی منوها کار میکند زمانی میزنیم blog: 
-    path('blog/',include('blog.urls'))
+    path('blog/',include('blog.urls')),
+    path('accounts/', include('accounts.urls')),
     
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

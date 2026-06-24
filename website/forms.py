@@ -1,5 +1,5 @@
 from django import forms
-from website.models import Contact
+from website.models import Contact, Newsletter
 
 
 
@@ -18,3 +18,8 @@ class ContactForm(forms.ModelForm):
         # tamam field ha be ghir az name  
         # exclude = ['name']
     
+class NewsletterForms(forms.ModelForm):
+    
+    class Meta:
+        model = Newsletter
+        fields = '__all__'
